@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "61e6fbdd-7e81-4857-a2d5-b14fbcb4a28c",
+		"name": "realty",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19203161",
+		"_collection_link": "https://galactic-shuttle-848244.postman.co/workspace/New-Team-Workspace~5f8eb686-3d24-452b-a3e9-a8b1e8df53a2/collection/19203161-61e6fbdd-7e81-4857-a2d5-b14fbcb4a28c?action=share&source=collection_link&creator=19203161"
+	},
+	"item": [
+		{
+			"name": "offer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "24366e9a67fad54d8370e5ebba917bcdadf724bf6d3da08d2225685abcc0f084a30fb8282970cb0b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"b24_contact_id\": 1001,\r\n    \"b24_deal_id\": 34532,\r\n    \"b24_manager_id\": 12,\r\n    \"manager\": \"Иванов Иван\",\r\n    \"position\": \"Специалист отдела продаж\",\r\n    \"phone1\": \"79526846266\",\r\n    \"avatar\": \";ljksdflkasjdflk.jpg\",\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://realty.local/api/v1/offer",
+					"protocol": "http",
+					"host": [
+						"realty",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"offer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "offer/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "24366e9a67fad54d8370e5ebba917bcdadf724bf6d3da08d2225685abcc0f084a30fb8282970cb0b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"b24_manager_id\": 1,\r\n    \"manager\": \"Иванов2 Иван\",\r\n    \"position\": \"Специалист1 отдела продаж\",\r\n    \"avatar\": \"11111;ljksdflkasjdflk.jpg\",\r\n    \"status\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://realty.local/api/v1/offer/ef7cf438-1602-4b8d-a3af-e479ff81900e",
+					"protocol": "http",
+					"host": [
+						"realty",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"offer",
+						"ef7cf438-1602-4b8d-a3af-e479ff81900e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "offer_item/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "24366e9a67fad54d8370e5ebba917bcdadf724bf6d3da08d2225685abcc0f084a30fb8282970cb0b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"offer_id\": 12,\r\n    \"cid\": \"936DA01F-9ABD-4d9d-80C7-02AF85C822A8\",\r\n    \"type\": \"Евродвушка\",\r\n    \"square\": \"54.3\",\r\n    \"complex\": \"Да.Квартал Республика\",\r\n    \"house\": \"ГП-2\",\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\r\n    \"images\": [\r\n        \"\",\r\n        \"\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://realty.local/api/v1/offer_item",
+					"protocol": "http",
+					"host": [
+						"realty",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"offer_item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "offer_item/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "24366e9a67fad54d8370e5ebba917bcdadf724bf6d3da08d2225685abcc0f084a30fb8282970cb0b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://realty.local/api/v1/offer_item/1",
+					"protocol": "http",
+					"host": [
+						"realty",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"offer_item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
